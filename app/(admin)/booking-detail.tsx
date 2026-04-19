@@ -300,7 +300,7 @@ export default function BookingDetailScreen() {
               value={noteText}
               onChangeText={setNoteText}
               placeholder="Add internal note..."
-              placeholderTextColor="#6b6b6b"
+              placeholderTextColor="#94A3B8"
               multiline
               numberOfLines={3}
               style={styles.noteInput}
@@ -356,7 +356,7 @@ export default function BookingDetailScreen() {
           <View style={styles.modalBox}>
             <Text style={styles.modalTitle}>Assign Chauffeur</Text>
             {chauffeursQuery.isLoading ? (
-              <ActivityIndicator color="#C9A84C" />
+              <ActivityIndicator color="#38BDF8" />
             ) : (
               <FlatList
                 data={chauffeursQuery.data?.chauffeurs ?? []}
@@ -408,7 +408,7 @@ export default function BookingDetailScreen() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#0a0a0a',
+    backgroundColor: '#0B1220',
   },
   content: {
     padding: 16,
@@ -421,7 +421,7 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   bookingRef: {
-    color: '#C9A84C',
+    color: '#38BDF8',
     fontSize: 22,
     fontWeight: '700',
     fontFamily: 'monospace',
@@ -435,7 +435,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   sectionTitle: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 14,
     fontWeight: '700',
     marginTop: 16,
@@ -444,8 +444,8 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
   card: {
-    backgroundColor: '#1a1a1a',
-    borderColor: '#2a2a2a',
+    backgroundColor: '#121A2B',
+    borderColor: '#1E2940',
     borderWidth: 1,
     borderRadius: 10,
     padding: 14,
@@ -453,16 +453,16 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   cardRow: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 14,
     lineHeight: 20,
   },
   link: {
-    color: '#C9A84C',
+    color: '#38BDF8',
     textDecorationLine: 'underline',
   },
   muted: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 13,
   },
   pricingRow: {
@@ -471,31 +471,31 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   pricingLabel: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 13,
   },
   pricingValue: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 13,
   },
   totalRow: {
     marginTop: 8,
     paddingTop: 8,
-    borderTopColor: '#2a2a2a',
+    borderTopColor: '#1E2940',
     borderTopWidth: 1,
   },
   totalLabel: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontWeight: '700',
     fontSize: 15,
   },
   totalValue: {
-    color: '#C9A84C',
+    color: '#38BDF8',
     fontWeight: '700',
     fontSize: 18,
   },
   specialReqs: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 12,
     fontStyle: 'italic',
     marginTop: 4,
@@ -514,12 +514,12 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   noteInput: {
-    backgroundColor: '#1a1a1a',
-    borderColor: '#3a3a3a',
+    backgroundColor: '#121A2B',
+    borderColor: '#2A3A57',
     borderWidth: 1,
     borderRadius: 8,
     padding: 12,
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 14,
     minHeight: 80,
     textAlignVertical: 'top',
@@ -534,21 +534,21 @@ const styles = StyleSheet.create({
   },
   logRow: {
     paddingVertical: 8,
-    borderBottomColor: '#2a2a2a',
+    borderBottomColor: '#1E2940',
     borderBottomWidth: 1,
     gap: 2,
   },
   logAction: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontWeight: '600',
     fontSize: 13,
   },
   logNote: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 12,
   },
   logDate: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 11,
   },
   modalOverlay: {
@@ -557,14 +557,14 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   modalBox: {
-    backgroundColor: '#1a1a1a',
+    backgroundColor: '#121A2B',
     borderTopLeftRadius: 16,
     borderTopRightRadius: 16,
     padding: 20,
     maxHeight: '80%',
   },
   modalTitle: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 18,
     fontWeight: '700',
     marginBottom: 16,
@@ -572,26 +572,26 @@ const styles = StyleSheet.create({
   chauffeurRow: {
     padding: 12,
     borderRadius: 8,
-    borderColor: '#2a2a2a',
+    borderColor: '#1E2940',
     borderWidth: 1,
     marginBottom: 8,
     gap: 2,
   },
   chauffeurSelected: {
-    borderColor: '#C9A84C',
+    borderColor: '#38BDF8',
     backgroundColor: 'rgba(201,168,76,0.1)',
   },
   chauffeurName: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontWeight: '600',
     fontSize: 14,
   },
   chauffeurPhone: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 12,
   },
   chauffeurStatus: {
-    color: '#C9A84C',
+    color: '#38BDF8',
     fontSize: 11,
     textTransform: 'capitalize',
   },

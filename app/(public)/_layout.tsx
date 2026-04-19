@@ -5,9 +5,12 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 function PublicHeader() {
   return (
     <View style={styles.header}>
-      <Text style={styles.logo}>GULF LIMO</Text>
+      <View>
+        <Text style={styles.logo}>Gulf Limo</Text>
+        <Text style={styles.tagline}>Premium rides in minutes</Text>
+      </View>
       <View style={styles.links}>
-        <TouchableOpacity onPress={() => router.push('/(public)/lookup')}>
+        <TouchableOpacity onPress={() => router.push('/(public)/lookup')} style={styles.actionPill}>
           <Text style={styles.link}>My Booking</Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -26,7 +29,7 @@ export default function PublicLayout() {
     <Stack
       screenOptions={{
         header: () => <PublicHeader />,
-        contentStyle: { backgroundColor: '#0a0a0a' },
+        contentStyle: { backgroundColor: '#0B1220' },
       }}
     />
   );
@@ -35,37 +38,51 @@ export default function PublicLayout() {
 const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'flex-end',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
-    paddingVertical: 14,
-    backgroundColor: '#0a0a0a',
-    borderBottomColor: '#2a2a2a',
+    paddingTop: 14,
+    paddingBottom: 12,
+    backgroundColor: '#0B1220',
+    borderBottomColor: '#1E2940',
     borderBottomWidth: 1,
   },
   logo: {
-    color: '#C9A84C',
-    fontSize: 18,
+    color: '#38BDF8',
+    fontSize: 20,
     fontWeight: '700',
-    letterSpacing: 3,
+    letterSpacing: 0.2,
+  },
+  tagline: {
+    color: '#94A3B8',
+    fontSize: 12,
+    marginTop: 2,
   },
   links: {
     flexDirection: 'row',
-    gap: 16,
+    gap: 8,
     alignItems: 'center',
   },
+  actionPill: {
+    borderColor: '#2A3A57',
+    borderWidth: 1,
+    borderRadius: 999,
+    paddingHorizontal: 12,
+    paddingVertical: 7,
+  },
   link: {
-    color: '#F5F0E8',
-    fontSize: 14,
+    color: '#F8FAFC',
+    fontSize: 13,
+    fontWeight: '600',
   },
   adminLink: {
-    backgroundColor: '#C9A84C',
+    backgroundColor: '#38BDF8',
     paddingHorizontal: 12,
-    paddingVertical: 5,
-    borderRadius: 6,
+    paddingVertical: 7,
+    borderRadius: 999,
   },
   adminText: {
-    color: '#0a0a0a',
+    color: '#0B1220',
     fontSize: 13,
     fontWeight: '700',
   },

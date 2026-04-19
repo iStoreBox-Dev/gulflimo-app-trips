@@ -111,33 +111,33 @@ export default function ContactScreen() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#0a0a0a',
+    backgroundColor: '#0B1220',
   },
   content: {
-    padding: 20,
+    padding: 18,
     paddingBottom: 40,
     maxWidth: 640,
     width: '100%',
     alignSelf: 'center',
   },
   title: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 22,
     fontWeight: '700',
     marginBottom: 20,
   },
   card: {
-    backgroundColor: '#1a1a1a',
-    borderColor: '#2a2a2a',
+    backgroundColor: '#121A2B',
+    borderColor: '#1E2940',
     borderWidth: 1,
-    borderRadius: 12,
+    borderRadius: 16,
     overflow: 'hidden',
   },
   row: {
     flexDirection: 'row',
     alignItems: 'center',
     padding: 16,
-    borderBottomColor: '#2a2a2a',
+    borderBottomColor: '#1E2940',
     borderBottomWidth: 1,
     gap: 12,
   },
@@ -145,25 +145,25 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   rowLabel: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 11,
     marginBottom: 2,
   },
   rowValue: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 15,
   },
   fallback: {
-    backgroundColor: '#1a1a1a',
-    borderRadius: 12,
+    backgroundColor: '#121A2B',
+    borderRadius: 16,
     padding: 20,
   },
   fallbackText: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 15,
   },
   link: {
-    color: '#C9A84C',
+    color: '#38BDF8',
     textDecorationLine: 'underline',
   },
 });

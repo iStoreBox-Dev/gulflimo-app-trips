@@ -192,17 +192,17 @@ export default function LookupScreen() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#0a0a0a',
+    backgroundColor: '#0B1220',
   },
   content: {
-    padding: 20,
+    padding: 18,
     paddingBottom: 40,
     maxWidth: 640,
     width: '100%',
     alignSelf: 'center',
   },
   title: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 22,
     fontWeight: '700',
     marginBottom: 20,
@@ -232,10 +232,10 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   bookingCard: {
-    backgroundColor: '#1a1a1a',
-    borderColor: '#2a2a2a',
+    backgroundColor: '#121A2B',
+    borderColor: '#1E2940',
     borderWidth: 1,
-    borderRadius: 12,
+    borderRadius: 16,
     padding: 16,
     marginTop: 20,
     gap: 8,
@@ -247,26 +247,26 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   bookingRef: {
-    color: '#C9A84C',
+    color: '#38BDF8',
     fontFamily: 'monospace',
     fontWeight: '700',
     fontSize: 16,
   },
   bookingVehicle: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontWeight: '700',
     fontSize: 16,
   },
   bookingRoute: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 13,
   },
   bookingDetail: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 13,
   },
   bookingPrice: {
-    color: '#C9A84C',
+    color: '#38BDF8',
     fontWeight: '700',
     fontSize: 18,
     marginTop: 8,
@@ -276,8 +276,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(239,68,68,0.15)',
     borderColor: '#EF4444',
     borderWidth: 1,
-    borderRadius: 8,
-    padding: 12,
+    borderRadius: 14,
+    padding: 14,
     alignItems: 'center',
   },
   cancelBtnText: {

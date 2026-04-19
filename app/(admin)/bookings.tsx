@@ -95,7 +95,7 @@ export default function BookingsScreen() {
             selectedValue={status}
             onValueChange={handleStatusChange}
             style={styles.picker}
-            dropdownIconColor="#C9A84C"
+            dropdownIconColor="#38BDF8"
           >
             {STATUS_OPTIONS.map((o) => (
               <Picker.Item key={o.value} label={o.label} value={o.value} />
@@ -106,7 +106,7 @@ export default function BookingsScreen() {
           value={search}
           onChangeText={handleSearchChange}
           placeholder="Search ref, name, email..."
-          placeholderTextColor="#6b6b6b"
+          placeholderTextColor="#94A3B8"
           style={styles.searchInput}
         />
       </View>
@@ -134,7 +134,7 @@ export default function BookingsScreen() {
             <RefreshControl
               refreshing={isFetching && page === 1}
               onRefresh={onRefresh}
-              tintColor="#C9A84C"
+              tintColor="#38BDF8"
             />
           }
           ListEmptyComponent={
@@ -149,7 +149,7 @@ export default function BookingsScreen() {
             hasMore ? (
               <TouchableOpacity style={styles.loadMoreBtn} onPress={loadMore}>
                 {isFetching ? (
-                  <ActivityIndicator color="#C9A84C" size="small" />
+                  <ActivityIndicator color="#38BDF8" size="small" />
                 ) : (
                   <Text style={styles.loadMoreText}>Load More</Text>
                 )}
@@ -165,34 +165,34 @@ export default function BookingsScreen() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#0a0a0a',
+    backgroundColor: '#0B1220',
   },
   filters: {
     padding: 12,
     gap: 8,
-    borderBottomColor: '#2a2a2a',
+    borderBottomColor: '#1E2940',
     borderBottomWidth: 1,
   },
   pickerWrapper: {
-    backgroundColor: '#1a1a1a',
-    borderColor: '#3a3a3a',
+    backgroundColor: '#121A2B',
+    borderColor: '#2A3A57',
     borderWidth: 1,
-    borderRadius: 8,
+    borderRadius: 14,
     overflow: 'hidden',
   },
   picker: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     height: 44,
   },
   searchInput: {
-    backgroundColor: '#1a1a1a',
-    borderColor: '#3a3a3a',
+    backgroundColor: '#121A2B',
+    borderColor: '#2A3A57',
     borderWidth: 1,
-    borderRadius: 8,
-    height: 44,
-    paddingHorizontal: 12,
-    color: '#F5F0E8',
-    fontSize: 14,
+    borderRadius: 14,
+    height: 48,
+    paddingHorizontal: 14,
+    color: '#F8FAFC',
+    fontSize: 15,
   },
   skeletonWrap: {
     padding: 16,
@@ -205,16 +205,16 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   loadMoreBtn: {
-    backgroundColor: '#1a1a1a',
-    borderColor: '#3a3a3a',
+    backgroundColor: '#121A2B',
+    borderColor: '#2A3A57',
     borderWidth: 1,
-    borderRadius: 8,
-    padding: 12,
+    borderRadius: 14,
+    padding: 14,
     alignItems: 'center',
     marginTop: 8,
   },
   loadMoreText: {
-    color: '#C9A84C',
+    color: '#38BDF8',
     fontWeight: '600',
     fontSize: 14,
   },

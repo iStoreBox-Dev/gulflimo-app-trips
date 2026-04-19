@@ -136,7 +136,7 @@ function VehicleModal({
               selectedValue={form.category}
               onValueChange={(v) => update('category', v as VehicleCategory)}
               style={styles.picker}
-              dropdownIconColor="#C9A84C"
+              dropdownIconColor="#38BDF8"
             >
               {CATEGORIES.map((c) => (
                 <Picker.Item key={c} label={c.charAt(0).toUpperCase() + c.slice(1)} value={c} />
@@ -185,8 +185,8 @@ function VehicleModal({
             <Switch
               value={form.is_active}
               onValueChange={(v) => update('is_active', v)}
-              trackColor={{ false: '#2a2a2a', true: '#C9A84C' }}
-              thumbColor="#F5F0E8"
+              trackColor={{ false: '#1E2940', true: '#38BDF8' }}
+              thumbColor="#F8FAFC"
             />
           </View>
           <View style={styles.modalActions}>
@@ -267,8 +267,8 @@ export default function VehiclesScreen() {
                 <Switch
                   value={item.is_active}
                   onValueChange={() => toggleMutation.mutate(item)}
-                  trackColor={{ false: '#2a2a2a', true: '#C9A84C' }}
-                  thumbColor="#F5F0E8"
+                  trackColor={{ false: '#1E2940', true: '#38BDF8' }}
+                  thumbColor="#F8FAFC"
                 />
                 <TouchableOpacity
                   style={styles.editBtn}
@@ -317,7 +317,7 @@ export default function VehiclesScreen() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#0a0a0a',
+    backgroundColor: '#0B1220',
   },
   padding: {
     padding: 16,
@@ -330,8 +330,8 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   vehicleRow: {
-    backgroundColor: '#1a1a1a',
-    borderColor: '#2a2a2a',
+    backgroundColor: '#121A2B',
+    borderColor: '#1E2940',
     borderWidth: 1,
     borderRadius: 10,
     padding: 12,
@@ -345,12 +345,12 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   vehicleName: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontWeight: '700',
     fontSize: 15,
   },
   vehicleModel: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 12,
   },
   badgeRow: {
@@ -360,7 +360,7 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
   muted: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 12,
   },
   vehicleActions: {
@@ -387,7 +387,7 @@ const styles = StyleSheet.create({
     width: 56,
     height: 56,
     borderRadius: 28,
-    backgroundColor: '#C9A84C',
+    backgroundColor: '#38BDF8',
     alignItems: 'center',
     justifyContent: 'center',
     elevation: 4,
@@ -397,7 +397,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
   },
   fabText: {
-    color: '#0a0a0a',
+    color: '#0B1220',
     fontSize: 28,
     fontWeight: '700',
     lineHeight: 30,
@@ -408,34 +408,34 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   modalBox: {
-    backgroundColor: '#1a1a1a',
+    backgroundColor: '#121A2B',
     borderTopLeftRadius: 16,
     borderTopRightRadius: 16,
     padding: 20,
     maxHeight: '90%',
   },
   modalTitle: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 18,
     fontWeight: '700',
     marginBottom: 16,
   },
   pickerLabel: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 12,
     marginBottom: 4,
     fontWeight: '500',
   },
   pickerWrapper: {
-    backgroundColor: '#1a1a1a',
-    borderColor: '#3a3a3a',
+    backgroundColor: '#121A2B',
+    borderColor: '#2A3A57',
     borderWidth: 1,
     borderRadius: 8,
     marginBottom: 12,
     overflow: 'hidden',
   },
   picker: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     height: 44,
   },
   stepperRow: {
@@ -452,12 +452,12 @@ const styles = StyleSheet.create({
     width: 36,
     height: 36,
     borderRadius: 18,
-    backgroundColor: '#2a2a2a',
+    backgroundColor: '#1E2940',
     alignItems: 'center',
     justifyContent: 'center',
   },
   stepperBtnText: {
-    color: '#C9A84C',
+    color: '#38BDF8',
     fontSize: 18,
     fontWeight: '600',
   },
@@ -468,7 +468,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   switchLabel: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 14,
   },
   modalActions: {

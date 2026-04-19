@@ -24,14 +24,14 @@ export default function Skeleton({
   const progress = useSharedValue(0);
 
   useEffect(() => {
-    progress.value = withRepeat(withTiming(1, { duration: 1000 }), -1, true);
+    progress.value = withRepeat(withTiming(1, { duration: 900 }), -1, true);
   }, [progress]);
 
   const animatedStyle = useAnimatedStyle(() => ({
     backgroundColor: interpolateColor(
       progress.value,
       [0, 1],
-      ['#1a1a1a', '#2a2a2a']
+      ['#121A2B', '#2A3A57']
     ),
   }));
 

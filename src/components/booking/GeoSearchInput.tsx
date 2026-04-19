@@ -48,16 +48,16 @@ export default function GeoSearchInput({
         value={text}
         onChangeText={handleChange}
         placeholder={placeholder}
-        placeholderTextColor="#6b6b6b"
+        placeholderTextColor="#94A3B8"
         style={styles.input}
         onBlur={() => {
           setTimeout(() => setShowDropdown(false), 200);
         }}
       />
-      {showDropdown && results.length > 0 && (
+      {showDropdown && Array.isArray(results) && results.length > 0 && (
         <View style={styles.dropdown}>
           <FlatList
-            data={results.slice(0, 5)}
+            data={Array.isArray(results) ? results.slice(0, 5) : []}
             keyExtractor={(item, idx) => `${item.lat}-${item.lon}-${idx}`}
             renderItem={({ item }) => (
               <TouchableOpacity
@@ -87,45 +87,45 @@ const styles = StyleSheet.create({
     zIndex: 999,
   },
   label: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 12,
     marginBottom: 4,
     fontWeight: '500',
   },
   input: {
-    backgroundColor: '#1a1a1a',
-    borderColor: '#3a3a3a',
+    backgroundColor: '#121A2B',
+    borderColor: '#2A3A57',
     borderWidth: 1,
-    borderRadius: 8,
-    height: 48,
-    paddingHorizontal: 12,
-    color: '#F5F0E8',
-    fontSize: 15,
+    borderRadius: 14,
+    height: 52,
+    paddingHorizontal: 14,
+    color: '#F8FAFC',
+    fontSize: 16,
   },
   dropdown: {
     position: Platform.OS === 'web' ? ('absolute' as never) : 'absolute',
-    top: 78,
+    top: 82,
     left: 0,
     right: 0,
-    backgroundColor: '#2a2a2a',
-    borderColor: '#3a3a3a',
+    backgroundColor: '#1E2940',
+    borderColor: '#2A3A57',
     borderWidth: 1,
-    borderRadius: 8,
+    borderRadius: 14,
     zIndex: 1000,
     maxHeight: 220,
     overflow: 'hidden',
   },
   dropdownItem: {
     padding: 12,
-    borderBottomColor: '#3a3a3a',
+    borderBottomColor: '#2A3A57',
     borderBottomWidth: 1,
   },
   dropdownText: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 13,
   },
   loadingText: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 11,
     marginTop: 4,
   },

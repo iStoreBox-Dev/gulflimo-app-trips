@@ -180,9 +180,9 @@ function ChauffeurModal({
               value={form.license_expiry}
               onChange={(e) => update('license_expiry', e.target.value)}
               style={{
-                backgroundColor: '#1a1a1a',
-                color: '#F5F0E8',
-                border: '1px solid #3a3a3a',
+                backgroundColor: '#121A2B',
+                color: '#F8FAFC',
+                border: '1px solid #2A3A57',
                 borderRadius: 8,
                 height: 44,
                 padding: '0 12px',
@@ -222,7 +222,7 @@ function ChauffeurModal({
               selectedValue={form.status}
               onValueChange={(v) => update('status', v as ChauffeurStatus)}
               style={styles.picker}
-              dropdownIconColor="#C9A84C"
+              dropdownIconColor="#38BDF8"
             >
               {STATUS_OPTIONS.map((s) => (
                 <Picker.Item
@@ -240,7 +240,7 @@ function ChauffeurModal({
               selectedValue={form.assigned_vehicle_id}
               onValueChange={(v) => update('assigned_vehicle_id', String(v))}
               style={styles.picker}
-              dropdownIconColor="#C9A84C"
+              dropdownIconColor="#38BDF8"
             >
               <Picker.Item label="None" value="" />
               {(vehiclesQuery.data?.vehicles ?? []).map((v) => (
@@ -323,7 +323,7 @@ export default function ChauffeursScreen() {
           value={search}
           onChangeText={handleSearchChange}
           placeholder="Search chauffeurs..."
-          placeholderTextColor="#6b6b6b"
+          placeholderTextColor="#94A3B8"
           style={styles.searchInput}
         />
       </View>
@@ -407,21 +407,21 @@ export default function ChauffeursScreen() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#0a0a0a',
+    backgroundColor: '#0B1220',
   },
   searchBar: {
     padding: 12,
-    borderBottomColor: '#2a2a2a',
+    borderBottomColor: '#1E2940',
     borderBottomWidth: 1,
   },
   searchInput: {
-    backgroundColor: '#1a1a1a',
-    borderColor: '#3a3a3a',
+    backgroundColor: '#121A2B',
+    borderColor: '#2A3A57',
     borderWidth: 1,
     borderRadius: 8,
     height: 44,
     paddingHorizontal: 12,
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 14,
   },
   padding: {
@@ -435,8 +435,8 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   chauffeurRow: {
-    backgroundColor: '#1a1a1a',
-    borderColor: '#2a2a2a',
+    backgroundColor: '#121A2B',
+    borderColor: '#1E2940',
     borderWidth: 1,
     borderRadius: 10,
     padding: 12,
@@ -450,12 +450,12 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   chauffeurName: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontWeight: '700',
     fontSize: 15,
   },
   chauffeurPhone: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 12,
     marginBottom: 4,
   },
@@ -489,7 +489,7 @@ const styles = StyleSheet.create({
     width: 56,
     height: 56,
     borderRadius: 28,
-    backgroundColor: '#C9A84C',
+    backgroundColor: '#38BDF8',
     alignItems: 'center',
     justifyContent: 'center',
     elevation: 4,
@@ -499,7 +499,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
   },
   fabText: {
-    color: '#0a0a0a',
+    color: '#0B1220',
     fontSize: 28,
     fontWeight: '700',
     lineHeight: 30,
@@ -510,39 +510,39 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   modalBox: {
-    backgroundColor: '#1a1a1a',
+    backgroundColor: '#121A2B',
     borderTopLeftRadius: 16,
     borderTopRightRadius: 16,
     padding: 20,
     maxHeight: '90%',
   },
   modalTitle: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 18,
     fontWeight: '700',
     marginBottom: 16,
   },
   pickerLabel: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 12,
     marginBottom: 4,
     fontWeight: '500',
   },
   pickerWrapper: {
-    backgroundColor: '#1a1a1a',
-    borderColor: '#3a3a3a',
+    backgroundColor: '#121A2B',
+    borderColor: '#2A3A57',
     borderWidth: 1,
     borderRadius: 8,
     marginBottom: 12,
     overflow: 'hidden',
   },
   picker: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     height: 44,
   },
   dateBtn: {
-    backgroundColor: '#1a1a1a',
-    borderColor: '#3a3a3a',
+    backgroundColor: '#121A2B',
+    borderColor: '#2A3A57',
     borderWidth: 1,
     borderRadius: 8,
     height: 44,
@@ -551,11 +551,11 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   dateBtnText: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 14,
   },
   datePlaceholder: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 14,
   },
   modalActions: {

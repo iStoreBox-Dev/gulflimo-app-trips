@@ -21,7 +21,7 @@ export default function AdminLayout() {
   if (checking) {
     return (
       <View style={styles.center}>
-        <ActivityIndicator color="#C9A84C" size="large" />
+        <ActivityIndicator color="#38BDF8" size="large" />
       </View>
     );
   }
@@ -29,10 +29,10 @@ export default function AdminLayout() {
   return (
     <Stack
       screenOptions={{
-        headerStyle: { backgroundColor: '#1a1a1a' },
-        headerTintColor: '#F5F0E8',
-        headerTitleStyle: { color: '#C9A84C', fontWeight: '700' },
-        contentStyle: { backgroundColor: '#0a0a0a' },
+        headerStyle: { backgroundColor: '#121A2B' },
+        headerTintColor: '#F8FAFC',
+        headerTitleStyle: { color: '#38BDF8', fontWeight: '700' },
+        contentStyle: { backgroundColor: '#0B1220' },
         headerShown: false,
       }}
     />
@@ -42,7 +42,7 @@ export default function AdminLayout() {
 const styles = StyleSheet.create({
   center: {
     flex: 1,
-    backgroundColor: '#0a0a0a',
+    backgroundColor: '#0B1220',
     alignItems: 'center',
     justifyContent: 'center',
   },

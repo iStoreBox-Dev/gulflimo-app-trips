@@ -70,7 +70,7 @@ export default function DashboardScreen() {
           <RefreshControl
             refreshing={refreshing}
             onRefresh={onRefresh}
-            tintColor="#C9A84C"
+            tintColor="#38BDF8"
           />
         }
       >
@@ -93,7 +93,7 @@ export default function DashboardScreen() {
             <StatCard
               label="Today"
               value={stats?.bookings_today ?? 0}
-              color="#C9A84C"
+              color="#38BDF8"
             />
             <StatCard
               label="Pending"
@@ -161,17 +161,17 @@ export default function DashboardScreen() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#0a0a0a',
+    backgroundColor: '#0B1220',
   },
   content: {
-    padding: 16,
+    padding: 14,
     paddingBottom: 40,
     maxWidth: 1024,
     width: '100%',
     alignSelf: 'center',
   },
   sectionTitle: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 16,
     fontWeight: '700',
     marginBottom: 12,
@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   seeAll: {
-    color: '#C9A84C',
+    color: '#38BDF8',
     fontSize: 13,
   },
   statsGrid: {
@@ -198,8 +198,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'flex-end',
     gap: 6,
-    backgroundColor: '#1a1a1a',
-    borderRadius: 12,
+    backgroundColor: '#121A2B',
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: '#1E2940',
     padding: 16,
     marginBottom: 20,
     height: 140,
@@ -211,17 +213,17 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   chartCount: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 10,
   },
   bar: {
     width: '60%',
-    backgroundColor: '#C9A84C',
+    backgroundColor: '#38BDF8',
     borderRadius: 3,
     minHeight: 4,
   },
   chartLabel: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 9,
   },
 });

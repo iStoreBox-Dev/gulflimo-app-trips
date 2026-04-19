@@ -51,38 +51,40 @@ export default function LoginScreen() {
         contentContainerStyle={styles.content}
         keyboardShouldPersistTaps="handled"
       >
-        <Text style={styles.logo}>GULF LIMO</Text>
-        <Text style={styles.subtitle}>Admin Portal</Text>
+        <View style={styles.panel}>
+          <Text style={styles.logo}>Gulf Limo</Text>
+          <Text style={styles.subtitle}>Admin Portal</Text>
 
-        {error ? (
-          <View style={styles.errorBanner}>
-            <Text style={styles.errorText}>{error}</Text>
-          </View>
-        ) : null}
+          {error ? (
+            <View style={styles.errorBanner}>
+              <Text style={styles.errorText}>{error}</Text>
+            </View>
+          ) : null}
 
-        <Input
-          label="Email"
-          value={email}
-          onChangeText={setEmail}
-          placeholder="admin@gulflimo.com"
-          keyboardType="email-address"
-          autoCapitalize="none"
-        />
-        <Input
-          label="Password"
-          value={password}
-          onChangeText={setPassword}
-          placeholder="••••••••"
-          secureTextEntry
-        />
+          <Input
+            label="Email"
+            value={email}
+            onChangeText={setEmail}
+            placeholder="admin@gulflimo.com"
+            keyboardType="email-address"
+            autoCapitalize="none"
+          />
+          <Input
+            label="Password"
+            value={password}
+            onChangeText={setPassword}
+            placeholder="••••••••"
+            secureTextEntry
+          />
 
-        <Button
-          label="Sign In"
-          onPress={handleLogin}
-          loading={loginMutation.isPending}
-          size="lg"
-          style={styles.btn}
-        />
+          <Button
+            label="Sign In"
+            onPress={handleLogin}
+            loading={loginMutation.isPending}
+            size="lg"
+            style={styles.btn}
+          />
+        </View>
       </ScrollView>
     </KeyboardAvoidingView>
   );
@@ -91,26 +93,33 @@ export default function LoginScreen() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#0a0a0a',
+    backgroundColor: '#0B1220',
   },
   content: {
     flex: 1,
-    padding: 32,
+    padding: 20,
     justifyContent: 'center',
     maxWidth: 480,
     width: '100%',
     alignSelf: 'center',
   },
+  panel: {
+    backgroundColor: '#121A2B',
+    borderColor: '#1E2940',
+    borderWidth: 1,
+    borderRadius: 20,
+    padding: 20,
+  },
   logo: {
-    color: '#C9A84C',
-    fontSize: 28,
+    color: '#38BDF8',
+    fontSize: 30,
     fontWeight: '700',
-    letterSpacing: 4,
+    letterSpacing: 0.2,
     textAlign: 'center',
     marginBottom: 8,
   },
   subtitle: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 14,
     textAlign: 'center',
     marginBottom: 32,

@@ -59,8 +59,8 @@ export default function VehicleCard({
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#1a1a1a',
-    borderColor: '#2a2a2a',
+    backgroundColor: '#121A2B',
+    borderColor: '#1E2940',
     borderWidth: 1,
     borderRadius: 12,
     marginBottom: 12,
@@ -68,14 +68,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   selected: {
-    borderColor: '#C9A84C',
+    borderColor: '#38BDF8',
     borderWidth: 2,
   },
   checkmark: {
     position: 'absolute',
     top: 8,
     right: 8,
-    backgroundColor: '#C9A84C',
+    backgroundColor: '#38BDF8',
     width: 24,
     height: 24,
     borderRadius: 12,
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   checkmarkText: {
-    color: '#0a0a0a',
+    color: '#0B1220',
     fontWeight: '700',
     fontSize: 13,
   },
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
   imagePlaceholder: {
     width: 110,
     height: 90,
-    backgroundColor: '#2a2a2a',
+    backgroundColor: '#1E2940',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -108,12 +108,12 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   name: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontWeight: '700',
     fontSize: 15,
   },
   model: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 12,
   },
   row: {
@@ -123,11 +123,11 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
   capacity: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 12,
   },
   price: {
-    color: '#C9A84C',
+    color: '#38BDF8',
     fontWeight: '700',
     fontSize: 16,
     marginTop: 4,

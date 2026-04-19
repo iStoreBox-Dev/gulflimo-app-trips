@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
   header: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontWeight: '700',
     fontSize: 15,
     marginBottom: 14,
@@ -121,12 +121,12 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   label: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 13,
     flex: 1,
   },
   value: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 13,
     flex: 2,
     textAlign: 'right',
@@ -146,12 +146,12 @@ const styles = StyleSheet.create({
     paddingLeft: 8,
   },
   addOnLabel: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 12,
   },
   divider: {
     height: 1,
-    backgroundColor: '#2a2a2a',
+    backgroundColor: '#1E2940',
     marginVertical: 12,
   },
   totalRow: {
@@ -160,12 +160,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   totalLabel: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontWeight: '700',
     fontSize: 16,
   },
   totalValue: {
-    color: '#C9A84C',
+    color: '#38BDF8',
     fontWeight: '700',
     fontSize: 22,
   },

@@ -14,7 +14,7 @@ export const BOOKING_STATUS_COLORS: Record<BookingStatus, string> = {
   pending: '#F59E0B',
   confirmed: '#3B82F6',
   chauffeur_assigned: '#8B5CF6',
-  in_progress: '#C9A84C',
+  in_progress: '#38BDF8',
   completed: '#22C55E',
   cancelled: '#6B7280',
   rejected: '#EF4444',
@@ -43,7 +43,7 @@ export const COUNTRY_CODES = [
 
 export const CHAUFFEUR_STATUS_COLOR: Record<ChauffeurStatus, string> = {
   available: '#22C55E',
-  on_trip: '#C9A84C',
+  on_trip: '#38BDF8',
   off_duty: '#F59E0B',
   inactive: '#6B7280',
 };

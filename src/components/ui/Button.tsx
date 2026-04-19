@@ -20,30 +20,30 @@ interface ButtonProps extends Omit<TouchableOpacityProps, 'style'> {
 }
 
 const BG: Record<Variant, string> = {
-  primary: '#C9A84C',
+  primary: '#38BDF8',
   secondary: 'transparent',
   ghost: 'transparent',
   danger: '#EF4444',
 };
 
 const TEXT_COLOR: Record<Variant, string> = {
-  primary: '#0a0a0a',
-  secondary: '#C9A84C',
-  ghost: '#F5F0E8',
+  primary: '#0B1220',
+  secondary: '#38BDF8',
+  ghost: '#F8FAFC',
   danger: '#FFFFFF',
 };
 
 const BORDER_COLOR: Record<Variant, string | undefined> = {
   primary: undefined,
-  secondary: '#C9A84C',
+  secondary: '#38BDF8',
   ghost: undefined,
   danger: undefined,
 };
 
 const HEIGHT: Record<Size, number> = {
-  sm: 36,
-  md: 44,
-  lg: 52,
+  sm: 40,
+  md: 48,
+  lg: 56,
 };
 
 const FONT_SIZE: Record<Size, number> = {
@@ -100,14 +100,14 @@ export default function Button({
 
 const styles = StyleSheet.create({
   base: {
-    borderRadius: 8,
-    paddingHorizontal: 16,
+    borderRadius: 14,
+    paddingHorizontal: 18,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
   },
   label: {
-    fontWeight: '600',
-    letterSpacing: 0.3,
+    fontWeight: '700',
+    letterSpacing: 0.2,
   },
 });

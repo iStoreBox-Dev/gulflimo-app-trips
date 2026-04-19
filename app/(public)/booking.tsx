@@ -412,14 +412,14 @@ export default function BookingScreen() {
               selectedValue={form.hourly_duration}
               onValueChange={(v) => updateForm('hourly_duration', Number(v))}
               style={styles.picker}
-              dropdownIconColor="#C9A84C"
+              dropdownIconColor="#38BDF8"
             >
               {HOURLY_OPTIONS.map((h) => (
                 <Picker.Item
                   key={h}
                   label={`${h} hours`}
                   value={h}
-                  color={Platform.OS === 'android' ? '#F5F0E8' : undefined}
+                  color={Platform.OS === 'android' ? '#F8FAFC' : undefined}
                 />
               ))}
             </Picker>
@@ -436,9 +436,9 @@ export default function BookingScreen() {
           min={todayString()}
           onChange={(e) => updateForm('departure_date', e.target.value)}
           style={{
-            backgroundColor: '#1a1a1a',
-            color: '#F5F0E8',
-            border: '1px solid #3a3a3a',
+            backgroundColor: '#121A2B',
+            color: '#F8FAFC',
+            border: '1px solid #2A3A57',
             borderRadius: 8,
             height: 48,
             padding: '0 12px',
@@ -485,9 +485,9 @@ export default function BookingScreen() {
           value={form.departure_time}
           onChange={(e) => updateForm('departure_time', e.target.value)}
           style={{
-            backgroundColor: '#1a1a1a',
-            color: '#F5F0E8',
-            border: '1px solid #3a3a3a',
+            backgroundColor: '#121A2B',
+            color: '#F8FAFC',
+            border: '1px solid #2A3A57',
             borderRadius: 8,
             height: 48,
             padding: '0 12px',
@@ -539,9 +539,9 @@ export default function BookingScreen() {
               min={form.departure_date || todayString()}
               onChange={(e) => updateForm('return_date', e.target.value)}
               style={{
-                backgroundColor: '#1a1a1a',
-                color: '#F5F0E8',
-                border: '1px solid #3a3a3a',
+                backgroundColor: '#121A2B',
+                color: '#F8FAFC',
+                border: '1px solid #2A3A57',
                 borderRadius: 8,
                 height: 48,
                 padding: '0 12px',
@@ -584,9 +584,9 @@ export default function BookingScreen() {
               value={form.return_time}
               onChange={(e) => updateForm('return_time', e.target.value)}
               style={{
-                backgroundColor: '#1a1a1a',
-                color: '#F5F0E8',
-                border: '1px solid #3a3a3a',
+                backgroundColor: '#121A2B',
+                color: '#F8FAFC',
+                border: '1px solid #2A3A57',
                 borderRadius: 8,
                 height: 48,
                 padding: '0 12px',
@@ -753,7 +753,7 @@ export default function BookingScreen() {
           value={promoInput}
           onChangeText={setPromoInput}
           placeholder="Promo code"
-          placeholderTextColor="#6b6b6b"
+          placeholderTextColor="#94A3B8"
           style={styles.promoInput}
           autoCapitalize="characters"
         />
@@ -763,7 +763,7 @@ export default function BookingScreen() {
           disabled={validatePromoMutation.isPending}
         >
           {validatePromoMutation.isPending ? (
-            <ActivityIndicator color="#0a0a0a" size="small" />
+            <ActivityIndicator color="#0B1220" size="small" />
           ) : (
             <Text style={styles.applyBtnText}>Apply</Text>
           )}
@@ -838,14 +838,14 @@ export default function BookingScreen() {
           selectedValue={form.country_code}
           onValueChange={(v) => updateForm('country_code', String(v))}
           style={styles.picker}
-          dropdownIconColor="#C9A84C"
+          dropdownIconColor="#38BDF8"
         >
           {COUNTRY_CODES.map((c) => (
             <Picker.Item
               key={c.code}
               label={`${c.label} (${c.country})`}
               value={c.code}
-              color={Platform.OS === 'android' ? '#F5F0E8' : undefined}
+              color={Platform.OS === 'android' ? '#F8FAFC' : undefined}
             />
           ))}
         </Picker>
@@ -1033,7 +1033,7 @@ export default function BookingScreen() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#0a0a0a',
+    backgroundColor: '#0B1220',
     maxWidth: 640,
     alignSelf: 'center',
     width: '100%',
@@ -1042,20 +1042,20 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   scrollContent: {
-    padding: 20,
+    padding: 18,
     paddingBottom: 40,
   },
   confirmCenter: {
     alignItems: 'center',
   },
   stepTitle: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 20,
     fontWeight: '700',
     marginBottom: 20,
   },
   fieldLabel: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 12,
     marginBottom: 4,
     fontWeight: '500',
@@ -1067,53 +1067,53 @@ const styles = StyleSheet.create({
   },
   toggleBtn: {
     flex: 1,
-    height: 44,
-    borderRadius: 8,
+    height: 48,
+    borderRadius: 14,
     borderWidth: 1,
-    borderColor: '#3a3a3a',
+    borderColor: '#2A3A57',
     alignItems: 'center',
     justifyContent: 'center',
   },
   toggleActive: {
-    backgroundColor: '#C9A84C',
-    borderColor: '#C9A84C',
+    backgroundColor: '#38BDF8',
+    borderColor: '#38BDF8',
   },
   toggleText: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontWeight: '600',
     fontSize: 14,
   },
   toggleTextActive: {
-    color: '#0a0a0a',
+    color: '#0B1220',
   },
   pickerWrapper: {
-    backgroundColor: '#1a1a1a',
-    borderColor: '#3a3a3a',
+    backgroundColor: '#121A2B',
+    borderColor: '#2A3A57',
     borderWidth: 1,
-    borderRadius: 8,
+    borderRadius: 14,
     marginBottom: 12,
     overflow: 'hidden',
   },
   picker: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     height: 48,
   },
   dateBtn: {
-    backgroundColor: '#1a1a1a',
-    borderColor: '#3a3a3a',
+    backgroundColor: '#121A2B',
+    borderColor: '#2A3A57',
     borderWidth: 1,
-    borderRadius: 8,
-    height: 48,
+    borderRadius: 14,
+    height: 52,
     justifyContent: 'center',
-    paddingHorizontal: 12,
+    paddingHorizontal: 14,
     marginBottom: 12,
   },
   dateBtnText: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 15,
   },
   datePlaceholder: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 15,
   },
   stepperRow: {
@@ -1126,17 +1126,17 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: '#2a2a2a',
+    backgroundColor: '#1E2940',
     alignItems: 'center',
     justifyContent: 'center',
   },
   stepperBtnText: {
-    color: '#C9A84C',
+    color: '#38BDF8',
     fontSize: 20,
     fontWeight: '600',
   },
   stepperValue: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 18,
     fontWeight: '700',
     minWidth: 30,
@@ -1153,21 +1153,21 @@ const styles = StyleSheet.create({
     height: 22,
     borderRadius: 4,
     borderWidth: 1,
-    borderColor: '#3a3a3a',
+    borderColor: '#2A3A57',
     alignItems: 'center',
     justifyContent: 'center',
   },
   checkboxChecked: {
-    backgroundColor: '#C9A84C',
-    borderColor: '#C9A84C',
+    backgroundColor: '#38BDF8',
+    borderColor: '#38BDF8',
   },
   checkmark: {
-    color: '#0a0a0a',
+    color: '#0B1220',
     fontSize: 13,
     fontWeight: '700',
   },
   checkboxLabel: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 14,
   },
   ctaBtn: {
@@ -1219,8 +1219,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingVertical: 16,
     paddingHorizontal: 20,
-    backgroundColor: '#0a0a0a',
-    borderBottomColor: '#2a2a2a',
+    backgroundColor: '#0B1220',
+    borderBottomColor: '#1E2940',
     borderBottomWidth: 1,
   },
   progressStep: {
@@ -1228,41 +1228,41 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   progressDot: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
+    width: 34,
+    height: 34,
+    borderRadius: 17,
     borderWidth: 2,
-    borderColor: '#3a3a3a',
+    borderColor: '#2A3A57',
     alignItems: 'center',
     justifyContent: 'center',
   },
   progressDotActive: {
-    backgroundColor: '#C9A84C',
-    borderColor: '#C9A84C',
+    backgroundColor: '#38BDF8',
+    borderColor: '#38BDF8',
   },
   progressDotText: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontWeight: '700',
     fontSize: 13,
   },
   progressDotTextActive: {
-    color: '#0a0a0a',
+    color: '#0B1220',
   },
   progressLine: {
     width: 40,
     height: 2,
-    backgroundColor: '#3a3a3a',
+    backgroundColor: '#2A3A57',
     marginHorizontal: 4,
   },
   progressLineActive: {
-    backgroundColor: '#C9A84C',
+    backgroundColor: '#38BDF8',
   },
   backBtn: {
     paddingHorizontal: 20,
     paddingVertical: 10,
   },
   backBtnText: {
-    color: '#C9A84C',
+    color: '#38BDF8',
     fontSize: 14,
     fontWeight: '600',
   },
@@ -1273,25 +1273,25 @@ const styles = StyleSheet.create({
   },
   promoInput: {
     flex: 1,
-    backgroundColor: '#1a1a1a',
-    borderColor: '#3a3a3a',
+    backgroundColor: '#121A2B',
+    borderColor: '#2A3A57',
     borderWidth: 1,
-    borderRadius: 8,
-    height: 48,
-    paddingHorizontal: 12,
-    color: '#F5F0E8',
-    fontSize: 14,
+    borderRadius: 14,
+    height: 52,
+    paddingHorizontal: 14,
+    color: '#F8FAFC',
+    fontSize: 15,
   },
   applyBtn: {
-    backgroundColor: '#C9A84C',
-    borderRadius: 8,
-    height: 48,
+    backgroundColor: '#38BDF8',
+    borderRadius: 14,
+    height: 52,
     paddingHorizontal: 16,
     alignItems: 'center',
     justifyContent: 'center',
   },
   applyBtnText: {
-    color: '#0a0a0a',
+    color: '#0B1220',
     fontWeight: '700',
     fontSize: 14,
   },
@@ -1305,25 +1305,25 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     borderRadius: 40,
-    backgroundColor: '#C9A84C',
+    backgroundColor: '#38BDF8',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 20,
     marginTop: 20,
   },
   confirmCheck: {
-    color: '#0a0a0a',
+    color: '#0B1220',
     fontSize: 36,
     fontWeight: '700',
   },
   confirmTitle: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 24,
     fontWeight: '700',
     marginBottom: 12,
   },
   confirmRef: {
-    color: '#C9A84C',
+    color: '#38BDF8',
     fontSize: 22,
     fontWeight: '700',
     fontFamily: 'monospace',
@@ -1331,21 +1331,21 @@ const styles = StyleSheet.create({
     letterSpacing: 2,
   },
   confirmCard: {
-    backgroundColor: '#1a1a1a',
-    borderColor: '#2a2a2a',
+    backgroundColor: '#121A2B',
+    borderColor: '#1E2940',
     borderWidth: 1,
-    borderRadius: 12,
+    borderRadius: 16,
     padding: 16,
     width: '100%',
     gap: 8,
     marginBottom: 16,
   },
   confirmRow: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 14,
   },
   confirmPrice: {
-    color: '#C9A84C',
+    color: '#38BDF8',
     fontWeight: '700',
     fontSize: 18,
     marginTop: 8,

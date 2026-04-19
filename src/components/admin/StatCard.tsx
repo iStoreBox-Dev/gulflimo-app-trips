@@ -23,8 +23,10 @@ export default function StatCard({ label, value, subLabel, color }: StatCardProp
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#1a1a1a',
-    borderRadius: 12,
+    backgroundColor: '#121A2B',
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: '#1E2940',
     padding: 16,
     flexDirection: 'row',
     alignItems: 'center',
@@ -46,18 +48,18 @@ const styles = StyleSheet.create({
     paddingLeft: 12,
   },
   value: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 24,
     fontWeight: '700',
     lineHeight: 30,
   },
   label: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 12,
     marginTop: 2,
   },
   sub: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 11,
     marginTop: 2,
   },

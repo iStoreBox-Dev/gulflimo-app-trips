@@ -34,10 +34,10 @@ export default function BookingListItem({ booking, onPress }: BookingListItemPro
 
 const styles = StyleSheet.create({
   item: {
-    backgroundColor: '#1a1a1a',
-    borderColor: '#2a2a2a',
+    backgroundColor: '#121A2B',
+    borderColor: '#1E2940',
     borderWidth: 1,
-    borderRadius: 10,
+    borderRadius: 14,
     padding: 14,
     marginBottom: 8,
     gap: 5,
@@ -48,18 +48,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   ref: {
-    color: '#C9A84C',
+    color: '#38BDF8',
     fontFamily: 'monospace',
     fontWeight: '700',
     fontSize: 13,
   },
   name: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 14,
     fontWeight: '600',
   },
   route: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 12,
   },
   bottomRow: {
@@ -68,11 +68,11 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
   date: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 12,
   },
   price: {
-    color: '#F5F0E8',
+    color: '#F8FAFC',
     fontSize: 13,
     fontWeight: '600',
   },

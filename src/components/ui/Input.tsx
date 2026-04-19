@@ -53,7 +53,7 @@ export default function Input({
             styles.input,
             multiline ? styles.multilineInput : null,
           ]}
-          placeholderTextColor="#6b6b6b"
+          placeholderTextColor="#94A3B8"
         />
         {rightElement ? <View style={styles.right}>{rightElement}</View> : null}
       </View>
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   label: {
-    color: '#6b6b6b',
+    color: '#94A3B8',
     fontSize: 12,
     marginBottom: 4,
     fontWeight: '500',
@@ -75,23 +75,23 @@ const styles = StyleSheet.create({
   inputWrapper: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#1a1a1a',
-    borderColor: '#3a3a3a',
+    backgroundColor: '#121A2B',
+    borderColor: '#2A3A57',
     borderWidth: 1,
-    borderRadius: 8,
-    height: 48,
-    paddingHorizontal: 12,
+    borderRadius: 14,
+    height: 52,
+    paddingHorizontal: 14,
   },
   focused: {
-    borderColor: '#C9A84C',
+    borderColor: '#38BDF8',
   },
   errorBorder: {
     borderColor: '#EF4444',
   },
   input: {
     flex: 1,
-    color: '#F5F0E8',
-    fontSize: 15,
+    color: '#F8FAFC',
+    fontSize: 16,
     height: '100%',
   },
   multilineInput: {
