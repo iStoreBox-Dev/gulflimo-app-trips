@@ -1,5 +1,7 @@
 import '../global.css';
 import React, { useEffect } from 'react';
+import { View, Text } from 'react-native';
+import { initGlobalLogging } from '@/lib/logger';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import * as SplashScreen from 'expo-splash-screen';
@@ -14,10 +16,12 @@ import {
   Inter_600SemiBold,
   Inter_700Bold,
 } from '@expo-google-fonts/inter';
+import ErrorBoundary from '@/components/ErrorBoundary';
 
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
+  console.log('[ROOT] RootLayout render', { pathname: typeof window !== 'undefined' ? window.location.pathname : null });
   const [fontsLoaded] = useFonts({
     Inter_400Regular,
     Inter_500Medium,
@@ -26,19 +30,34 @@ export default function RootLayout() {
   });
 
   useEffect(() => {
+    console.log('[ROOT] RootLayout mounted');
+    initGlobalLogging();
+    return () => {
+      console.log('[ROOT] RootLayout unmounted');
+    };
+  }, []);
+
+  useEffect(() => {
     if (fontsLoaded) {
       SplashScreen.hideAsync();
     }
   }, [fontsLoaded]);
 
-  if (!fontsLoaded) return null;
+  if (!fontsLoaded)
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#0B1220' }}>
+        <Text style={{ color: '#F8FAFC', fontSize: 16 }}>Loading…</Text>
+      </View>
+    );
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <QueryClientProvider client={queryClient}>
-          <StatusBar style="light" backgroundColor="#0B1220" />
-          <Stack screenOptions={{ headerShown: false }} />
+          <ErrorBoundary>
+            <StatusBar style="light" backgroundColor="#0B1220" />
+            <Stack screenOptions={{ headerShown: false }} />
+          </ErrorBoundary>
         </QueryClientProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>

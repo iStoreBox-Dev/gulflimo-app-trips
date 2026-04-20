@@ -1,0 +1,86 @@
+{
+  "vehicles": [
+    {
+      "id": 1,
+      "name": "Toyota Camry",
+      "model": "Camry 2022",
+      "category": "sedan",
+      "capacity": 3,
+      "base_price": 120,
+      "description": "Comfortable sedan",
+      "image_url": "",
+      "is_active": true
+    },
+    {
+      "id": 2,
+      "name": "Mercedes E-Class",
+      "model": "E 300",
+      "category": "business",
+      "capacity": 3,
+      "base_price": 250,
+      "description": "Business class",
+      "image_url": "",
+      "is_active": true
+    }
+  ],
+  "bookings": [
+    {
+      "id": 101,
+      "booking_ref": "LOCAL-101",
+      "service_type": "trip",
+      "transfer_type": "oneway",
+      "pickup_location": "Dubai International Airport",
+      "pickup_lat": "25.2532",
+      "pickup_lng": "55.3657",
+      "dropoff_location": "Dubai Marina",
+      "dropoff_lat": "25.0820",
+      "dropoff_lng": "55.1406",
+      "departure_date": "2026-04-21",
+      "departure_time": "14:30",
+      "hourly_duration": null,
+      "passengers": 2,
+      "luggage": 2,
+      "flight_number": "",
+      "vehicle_id": 1,
+      "vehicle_snapshot": {
+        "name": "Toyota Camry",
+        "model": "Camry 2022",
+        "category": "sedan",
+        "base_price": 120,
+        "capacity": 3
+      },
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "john@example.com",
+      "country_code": "+971",
+      "phone": "501234567",
+      "special_requests": null,
+      "add_ons": {},
+      "add_ons_price": 0,
+      "promo_code": null,
+      "base_price": 120,
+      "discount_amount": 0,
+      "final_price": 120,
+      "distance_km": 20,
+      "language_code": "en",
+      "chauffeur_id": null,
+      "payment_status": "unpaid",
+      "status": "pending",
+      "source": "local",
+      "internal_notes": [],
+      "created_at": "2026-04-20T10:00:00Z",
+      "updated_at": "2026-04-20T10:00:00Z"
+    }
+  ],
+  "promos": [
+    {
+      "id": 1,
+      "code": "WELCOME10",
+      "discount_type": "percentage",
+      "discount_value": 10,
+      "used_count": 0,
+      "min_amount": 0,
+      "is_active": true
+    }
+  ]
+}

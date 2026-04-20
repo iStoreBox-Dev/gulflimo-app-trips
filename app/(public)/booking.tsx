@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import {
   View,
   Text,
@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { useQuery, useMutation } from '@tanstack/react-query';
 import { Picker } from '@react-native-picker/picker';
-import { router } from 'expo-router';
+import { router, useSearchParams } from 'expo-router';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
 import {
@@ -98,6 +98,7 @@ function todayString() {
 const HOURLY_OPTIONS = [2, 3, 4, 5, 6, 8, 10, 12];
 
 export default function BookingScreen() {
+  const params = useSearchParams();
   const [step, setStep] = useState(1);
   const [form, setForm] = useState<FormData>(defaultForm);
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
@@ -142,6 +143,18 @@ export default function BookingScreen() {
   });
 
   const vehicles = vehiclesQuery.data?.vehicles ?? [];
+
+  // Preselect vehicle when provided via query param: ?vehicle_id=2
+  useEffect(() => {
+    const vid = params?.vehicle_id ? Number(params.vehicle_id) : null;
+    if (vid && vehicles.length) {
+      const v = vehicles.find((x) => x.id === vid);
+      if (v) {
+        updateForm('vehicle_id', v.id);
+        updateForm('selected_vehicle', v);
+      }
+    }
+  }, [params?.vehicle_id, vehicles]);
 
   // Per-vehicle quote queries
   const vehicleQuotes = useQuery({
